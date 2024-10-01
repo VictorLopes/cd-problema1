@@ -1,0 +1,243 @@
+$comment
+	File created using the following command:
+		vcd file Proj.msim.vcd -direction
+$end
+$date
+	Mon Sep 30 01:24:16 2024
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module Proj_vlg_vec_tst $end
+$var reg 1 ! Bateria $end
+$var reg 1 " Ligar $end
+$var reg 1 # Sensor_Direito $end
+$var reg 1 $ Sensor_Esquerdo $end
+$var reg 1 % Sensor_Frontal $end
+$var reg 1 & Sensor_Trazeiro $end
+$var wire 1 ' A $end
+$var wire 1 ( B $end
+$var wire 1 ) C $end
+$var wire 1 * D $end
+$var wire 1 + Digito1 $end
+$var wire 1 , E $end
+$var wire 1 - F $end
+$var wire 1 . G $end
+$var wire 1 / P $end
+$var wire 1 0 RoboLigado $end
+
+$scope module i1 $end
+$var wire 1 1 gnd $end
+$var wire 1 2 vcc $end
+$var wire 1 3 unknown $end
+$var tri1 1 4 devclrn $end
+$var tri1 1 5 devpor $end
+$var tri1 1 6 devoe $end
+$var wire 1 7 Ligar~combout $end
+$var wire 1 8 Bateria~combout $end
+$var wire 1 9 Ligado~0_combout $end
+$var wire 1 : Sensor_Frontal~combout $end
+$var wire 1 ; Sensor_Esquerdo~combout $end
+$var wire 1 < Sensor_Direito~combout $end
+$var wire 1 = girar|Saida~0_combout $end
+$var wire 1 > Sensor_Trazeiro~combout $end
+$var wire 1 ? erro|WideOr0~0_combout $end
+$var wire 1 @ display1|A~0_combout $end
+$var wire 1 A Saida_Girar_Ligado~combout $end
+$var wire 1 B display1|WideOr0~4_combout $end
+$var wire 1 C display1|G~2_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+1#
+1$
+1%
+1&
+x'
+1(
+x)
+x*
+x+
+x,
+x-
+x.
+1/
+x0
+01
+12
+x3
+14
+15
+16
+x7
+x8
+x9
+x:
+x;
+x<
+x=
+x>
+x?
+x@
+xA
+xB
+xC
+$end
+#1132
+17
+08
+1:
+1;
+1<
+1>
+#5663
+1?
+#6010
+19
+#6115
+0=
+#6273
+0A
+#6276
+1C
+#6281
+1B
+#7001
+1@
+#10000
+0#
+0$
+#10474
+1)
+#10485
+1+
+#10691
+10
+#11070
+0.
+#11077
+0,
+#11132
+0;
+0<
+#11204
+0'
+#11740
+0-
+0*
+#15656
+1=
+#20000
+0&
+#21132
+0>
+#25979
+0?
+#27317
+0@
+#30000
+1#
+#31132
+1<
+#31520
+1'
+#32056
+1-
+1*
+#35656
+0=
+#40000
+1$
+0#
+#41132
+0<
+1;
+#50000
+0%
+1#
+#51132
+1<
+0:
+#55663
+1?
+#56274
+1@
+#56276
+0C
+#56951
+1C
+#60000
+0$
+#60477
+0'
+#61013
+0-
+0*
+#61132
+0;
+#66110
+0?
+#66844
+1A
+#67398
+0C
+#70000
+1!
+1%
+0#
+#71045
+0)
+#71132
+0<
+1:
+18
+#72192
+1.
+#75625
+09
+#75635
+0B
+#75656
+1=
+#76273
+0A
+#76274
+0@
+#79839
+0+
+#80000
+1&
+1$
+1#
+#80306
+00
+#80431
+1,
+#80474
+1)
+#80477
+1'
+#81013
+1-
+1*
+#81132
+1<
+1;
+1>
+#85663
+1?
+#86115
+0=
+#90000
+0"
+#91132
+07
+#100000

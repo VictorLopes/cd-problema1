@@ -1,0 +1,121 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+Z0 !s12c _opt1
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+Z2 !s12c _opt
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z3 d/home/victor/Downloads/CD v3/simulation/qsim
+T_opt
+!s12d 2322000
+!s110 1727655817
+V5i:>[RF<8AfiY=J[nljS60
+Z4 04 16 4 work Proj_vlg_vec_tst fast 0
+=1-000ae431a4f1-66f9ef89-b8cd2-b79d
+!s9c 1
+R1
+Z5 !s12b OEM100
+Z6 !s124 OEM10U2 
+Z7 o-quiet -auto_acc_if_foreign -work work -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver
+Z8 tCvgOpt 0
+n@_opt
+Z9 OL;O;2023.3;77
+R3
+T_opt1
+!s110 1727657646
+VO6m02]^_o[BWZm@gJ31nS2
+R4
+=1-000ae431a4f1-66f9f6ae-4f35b-c304
+R1
+R5
+R6
+R7
+R8
+n@_opt1
+R9
+R3
+vProj
+Z10 !s110 1727670255
+!i10b 1
+!s100 MDJiUf>CMT?Hec0m:c=J[3
+Z11 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I0?^EB883`QM?]HJlmYE?m0
+Z12 VDg1SIo80bB@j0V0VzS_@n1
+Z13 dD:/CD/CD v3/simulation/qsim
+w1727670254
+8Proj.vo
+FProj.vo
+!i122 64
+L0 32 480
+Z14 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z15 !s108 1727670255.000000
+!s107 Proj.vo|
+!s90 -work|work|Proj.vo|
+!i113 1
+Z16 o-work work
+R8
+n@proj
+vProj_vlg_vec_tst
+R10
+!i10b 1
+!s100 OIWXK4>78fm@25[UA:U]60
+R11
+I_C2iIZ<:88b<OI_:Yaodh2
+R12
+R13
+w1727670253
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 65
+L0 30 98
+R14
+r1
+!s85 0
+31
+R15
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R16
+R8
+n@proj_vlg_vec_tst

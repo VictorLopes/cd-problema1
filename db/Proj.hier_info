@@ -1,0 +1,80 @@
+|Proj
+Ligar => Ligado.IN0
+Ligar => comb.IN0
+Bateria => Ligado.IN1
+Bateria => comb.IN1
+Sensor_Frontal => Sensor_Frontal.IN3
+Sensor_Direito => Sensor_Direito.IN3
+Sensor_Esquerdo => Sensor_Esquerdo.IN3
+Sensor_Trazeiro => Sensor_Trazeiro.IN3
+A <= Display1:display1.port3
+B <= Display1:display1.port4
+C <= Display1:display1.port5
+D <= Display1:display1.port6
+E <= Display1:display1.port7
+F <= Display1:display1.port8
+G <= Display1:display1.port9
+P <= <VCC>
+Digito1 <= Display1:display1.port10
+RoboLigado <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Proj|Erro:erro
+Sensor_Frontal => Saida_Frontal_Trazeiro.IN0
+Sensor_Direito => Saida_Direita_Trazeiro.IN0
+Sensor_Direito => Saida_Direita_Esquerda.IN0
+Sensor_Esquerdo => Saida_Esquerda_Trazeiro.IN0
+Sensor_Esquerdo => Saida_Direita_Esquerda.IN1
+Sensor_Trazeiro => Saida_Frontal_Trazeiro.IN1
+Sensor_Trazeiro => Saida_Direita_Trazeiro.IN1
+Sensor_Trazeiro => Saida_Esquerda_Trazeiro.IN1
+Saida <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Proj|Re:re
+Sensor_Frontal => Saida_Frontal_Direito.IN0
+Sensor_Frontal => Saida_Frontal_Esquerdo.IN0
+Sensor_Frontal => WideOr0.IN2
+Sensor_Direito => Saida_Frontal_Direito.IN1
+Sensor_Esquerdo => Saida_Frontal_Esquerdo.IN1
+Sensor_Trazeiro => ~NO_FANOUT~
+Saida_Erro => comb.IN1
+Saida <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Proj|Girar:girar
+Sensor_Frontal => ~NO_FANOUT~
+Sensor_Direito => Saida_Direito_Esquerdo.IN0
+Sensor_Esquerdo => Saida_Direito_Esquerdo.IN1
+Sensor_Trazeiro => ~NO_FANOUT~
+Saida_Erro => NOT_Saida_Erro_Re.IN0
+Saida_Re => NOT_Saida_Erro_Re.IN1
+Saida <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Proj|Display1:display1
+Erro => comb.IN0
+Erro => comb.IN0
+Erro => comb.IN0
+Erro => comb.IN0
+Erro => WideOr0.IN0
+Erro => WideOr1.IN0
+Re => comb.IN1
+Re => WideOr0.IN1
+Re => WideOr1.IN1
+Girar => comb.IN1
+Girar => comb.IN1
+Girar => comb.DATAIN
+Girar => comb.IN1
+Girar => WideOr0.IN2
+Girar => WideOr1.IN2
+A <= comb.DB_MAX_OUTPUT_PORT_TYPE
+B <= <GND>
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+D <= comb.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+F <= comb.DB_MAX_OUTPUT_PORT_TYPE
+G <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Acender <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,511 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
+
+// DATE "09/30/2024 01:24:14"
+
+// 
+// Device: Altera EPM240T100C5 Package TQFP100
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module Proj (
+	Ligar,
+	Bateria,
+	Sensor_Frontal,
+	Sensor_Direito,
+	Sensor_Esquerdo,
+	Sensor_Trazeiro,
+	A,
+	B,
+	C,
+	D,
+	E,
+	F,
+	G,
+	P,
+	Digito1,
+	RoboLigado);
+input 	Ligar;
+input 	Bateria;
+input 	Sensor_Frontal;
+input 	Sensor_Direito;
+input 	Sensor_Esquerdo;
+input 	Sensor_Trazeiro;
+output 	A;
+output 	B;
+output 	C;
+output 	D;
+output 	E;
+output 	F;
+output 	G;
+output 	P;
+output 	Digito1;
+output 	RoboLigado;
+
+// Design Ports Information
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("Proj_v.sdo");
+// synopsys translate_on
+
+wire \Ligar~combout ;
+wire \Bateria~combout ;
+wire \Ligado~0_combout ;
+wire \Sensor_Frontal~combout ;
+wire \Sensor_Esquerdo~combout ;
+wire \Sensor_Direito~combout ;
+wire \girar|Saida~0_combout ;
+wire \Sensor_Trazeiro~combout ;
+wire \erro|WideOr0~0_combout ;
+wire \display1|A~0_combout ;
+wire \Saida_Girar_Ligado~combout ;
+wire \display1|WideOr0~4_combout ;
+wire \display1|G~2_combout ;
+
+
+// Location: PIN_42,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \Ligar~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\Ligar~combout ),
+	.padio(Ligar));
+// synopsys translate_off
+defparam \Ligar~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_40,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \Bateria~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\Bateria~combout ),
+	.padio(Bateria));
+// synopsys translate_off
+defparam \Bateria~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N6
+maxii_lcell \Ligado~0 (
+// Equation(s):
+// \Ligado~0_combout  = (((\Ligar~combout  & !\Bateria~combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\Ligar~combout ),
+	.datad(\Bateria~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\Ligado~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \Ligado~0 .lut_mask = "00f0";
+defparam \Ligado~0 .operation_mode = "normal";
+defparam \Ligado~0 .output_mode = "comb_only";
+defparam \Ligado~0 .register_cascade_mode = "off";
+defparam \Ligado~0 .sum_lutc_input = "datac";
+defparam \Ligado~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_38,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \Sensor_Frontal~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\Sensor_Frontal~combout ),
+	.padio(Sensor_Frontal));
+// synopsys translate_off
+defparam \Sensor_Frontal~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_34,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \Sensor_Esquerdo~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\Sensor_Esquerdo~combout ),
+	.padio(Sensor_Esquerdo));
+// synopsys translate_off
+defparam \Sensor_Esquerdo~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_36,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \Sensor_Direito~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\Sensor_Direito~combout ),
+	.padio(Sensor_Direito));
+// synopsys translate_off
+defparam \Sensor_Direito~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N7
+maxii_lcell \girar|Saida~0 (
+// Equation(s):
+// \girar|Saida~0_combout  = ((!\Sensor_Esquerdo~combout  & ((!\Sensor_Direito~combout ))))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\Sensor_Esquerdo~combout ),
+	.datac(vcc),
+	.datad(\Sensor_Direito~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\girar|Saida~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \girar|Saida~0 .lut_mask = "0033";
+defparam \girar|Saida~0 .operation_mode = "normal";
+defparam \girar|Saida~0 .output_mode = "comb_only";
+defparam \girar|Saida~0 .register_cascade_mode = "off";
+defparam \girar|Saida~0 .sum_lutc_input = "datac";
+defparam \girar|Saida~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_30,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \Sensor_Trazeiro~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\Sensor_Trazeiro~combout ),
+	.padio(Sensor_Trazeiro));
+// synopsys translate_off
+defparam \Sensor_Trazeiro~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N4
+maxii_lcell \erro|WideOr0~0 (
+// Equation(s):
+// \erro|WideOr0~0_combout  = (\Sensor_Esquerdo~combout  & (((\Sensor_Trazeiro~combout ) # (\Sensor_Direito~combout )))) # (!\Sensor_Esquerdo~combout  & (\Sensor_Trazeiro~combout  & ((\Sensor_Frontal~combout ) # (\Sensor_Direito~combout ))))
+
+	.clk(gnd),
+	.dataa(\Sensor_Frontal~combout ),
+	.datab(\Sensor_Esquerdo~combout ),
+	.datac(\Sensor_Trazeiro~combout ),
+	.datad(\Sensor_Direito~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\erro|WideOr0~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \erro|WideOr0~0 .lut_mask = "fce0";
+defparam \erro|WideOr0~0 .operation_mode = "normal";
+defparam \erro|WideOr0~0 .output_mode = "comb_only";
+defparam \erro|WideOr0~0 .register_cascade_mode = "off";
+defparam \erro|WideOr0~0 .sum_lutc_input = "datac";
+defparam \erro|WideOr0~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N8
+maxii_lcell \display1|A~0 (
+// Equation(s):
+// \display1|A~0_combout  = (\Ligado~0_combout  & ((\erro|WideOr0~0_combout ) # ((!\Sensor_Frontal~combout  & !\girar|Saida~0_combout ))))
+
+	.clk(gnd),
+	.dataa(\Ligado~0_combout ),
+	.datab(\Sensor_Frontal~combout ),
+	.datac(\girar|Saida~0_combout ),
+	.datad(\erro|WideOr0~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\display1|A~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \display1|A~0 .lut_mask = "aa02";
+defparam \display1|A~0 .operation_mode = "normal";
+defparam \display1|A~0 .output_mode = "comb_only";
+defparam \display1|A~0 .register_cascade_mode = "off";
+defparam \display1|A~0 .sum_lutc_input = "datac";
+defparam \display1|A~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N5
+maxii_lcell Saida_Girar_Ligado(
+// Equation(s):
+// \Saida_Girar_Ligado~combout  = (\Ligado~0_combout  & (!\Sensor_Frontal~combout  & (!\girar|Saida~0_combout  & !\erro|WideOr0~0_combout )))
+
+	.clk(gnd),
+	.dataa(\Ligado~0_combout ),
+	.datab(\Sensor_Frontal~combout ),
+	.datac(\girar|Saida~0_combout ),
+	.datad(\erro|WideOr0~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\Saida_Girar_Ligado~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam Saida_Girar_Ligado.lut_mask = "0002";
+defparam Saida_Girar_Ligado.operation_mode = "normal";
+defparam Saida_Girar_Ligado.output_mode = "comb_only";
+defparam Saida_Girar_Ligado.register_cascade_mode = "off";
+defparam Saida_Girar_Ligado.sum_lutc_input = "datac";
+defparam Saida_Girar_Ligado.synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N2
+maxii_lcell \display1|WideOr0~4 (
+// Equation(s):
+// \display1|WideOr0~4_combout  = (\Ligar~combout  & (!\Bateria~combout  & ((\Sensor_Frontal~combout ) # (!\girar|Saida~0_combout ))))
+
+	.clk(gnd),
+	.dataa(\Ligar~combout ),
+	.datab(\Sensor_Frontal~combout ),
+	.datac(\girar|Saida~0_combout ),
+	.datad(\Bateria~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\display1|WideOr0~4_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \display1|WideOr0~4 .lut_mask = "008a";
+defparam \display1|WideOr0~4 .operation_mode = "normal";
+defparam \display1|WideOr0~4 .output_mode = "comb_only";
+defparam \display1|WideOr0~4 .register_cascade_mode = "off";
+defparam \display1|WideOr0~4 .sum_lutc_input = "datac";
+defparam \display1|WideOr0~4 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N9
+maxii_lcell \display1|G~2 (
+// Equation(s):
+// \display1|G~2_combout  = (\Ligar~combout  & (!\Bateria~combout  & ((\Sensor_Frontal~combout ) # (\erro|WideOr0~0_combout ))))
+
+	.clk(gnd),
+	.dataa(\Ligar~combout ),
+	.datab(\Sensor_Frontal~combout ),
+	.datac(\erro|WideOr0~0_combout ),
+	.datad(\Bateria~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\display1|G~2_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \display1|G~2 .lut_mask = "00a8";
+defparam \display1|G~2 .operation_mode = "normal";
+defparam \display1|G~2 .output_mode = "comb_only";
+defparam \display1|G~2 .register_cascade_mode = "off";
+defparam \display1|G~2 .sum_lutc_input = "datac";
+defparam \display1|G~2 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_90,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \A~I (
+	.datain(!\display1|A~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(A));
+// synopsys translate_off
+defparam \A~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_70,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \B~I (
+	.datain(vcc),
+	.oe(vcc),
+	.combout(),
+	.padio(B));
+// synopsys translate_off
+defparam \B~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_41,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \C~I (
+	.datain(!\Saida_Girar_Ligado~combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(C));
+// synopsys translate_off
+defparam \C~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_98,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \D~I (
+	.datain(!\display1|A~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(D));
+// synopsys translate_off
+defparam \D~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_100,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \E~I (
+	.datain(!\display1|WideOr0~4_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(E));
+// synopsys translate_off
+defparam \E~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_92,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \F~I (
+	.datain(!\display1|A~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(F));
+// synopsys translate_off
+defparam \F~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_39,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \G~I (
+	.datain(!\display1|G~2_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(G));
+// synopsys translate_off
+defparam \G~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_96,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \P~I (
+	.datain(vcc),
+	.oe(vcc),
+	.combout(),
+	.padio(P));
+// synopsys translate_off
+defparam \P~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_88,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \Digito1~I (
+	.datain(\display1|WideOr0~4_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(Digito1));
+// synopsys translate_off
+defparam \Digito1~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_76,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \RoboLigado~I (
+	.datain(\Ligado~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(RoboLigado));
+// synopsys translate_off
+defparam \RoboLigado~I .operation_mode = "output";
+// synopsys translate_on
+
+endmodule
